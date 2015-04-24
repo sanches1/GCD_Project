@@ -1,0 +1,155 @@
+Human Activity Recognition Using Smartphones Summary Dataset
+Version 1.0
+_____________________________________________________________________________________________________________________
+STUDY DESIGN:
+
+
+Source data and information regarding the file structures can be obtained at this URL:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+Datasets used:
+
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+
+- 'features.txt': List of all features.
+
+- 'activity_labels.txt': Links the class labels with their activity name.
+
+- 'train/X_train.txt': Training set.
+
+- 'train/y_train.txt': Training labels.
+
+- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. 
+	Its range is from 1 to 30.
+
+- 'test/X_test.txt': Test set.
+
+- 'test/y_test.txt': Test labels. 
+
+- 'test/subject_test.txt': Each row identifies the subject who performed the activity for each window sample. 
+	Its range is from 1 to 30.
+
+For additional information on these files, including License information, refer to the source data README file.
+
+
+Variable selection:
+Train and Test datasets were collated and combined with subject identifiers and activity labels. 
+The combined data restricted to measures of the mean value (mean) and standard deviation (std).
+All features present in the raw data were considered for inclusion in the analysis dataset.
+
+Derivations:
+The final dataset includes the mean value of each of the selected raw variables grouping by subject and activity.
+_____________________________________________________________________________________________________________________
+CODE BOOK:
+1. Activity: Coded value identifying the activity being performed.
+	1 .Walking 
+	2 .Walking Upstairs
+	3 .Walking Downstairs
+	4 .Sitting
+	5 .Standing
+	6 .Lying Down
+
+2. ActivityName: Character value naming the activity being performed. These correspond to Activity.
+
+
+3. Subject: Numeric subject ID ranging from 1-30.
+
+
+The remaining variables follow the naming convention [feature name][summary measure][.axis] where
+
+"feature name" is the feature measured (as described in the source data) and include:
+	tBodyAcc
+	tGravityAcc
+	tBodyAccJerk
+	tBodyGyro
+	tBodyGyroJerk
+	tBodyAccMag
+	tGravityAccMag
+	tBodyAccJerkMag
+	tBodyGyroMag
+	tBodyGyroJerkMag
+	fBodyAcc
+	fBodyAccJerk
+	fBodyGyro
+	fBodyAccMag
+	fBodyAccJerkMag
+	fBodyGyroMag
+	fBodyGyroJerkMag
+  Note: 
+	t=Time, f=Frequency. 
+	Acc=Acceleration and is in standard gravity units (g). 
+	Gyro=angular velocity as measured by the gyroscope and is in normalized units of radians/second.
+	All features are normalized and bounded within [-1,1].
+	More information on these measurements can be found with the source data.
+
+"summary measure" is either "mean" for the mean value of the signals or "std" for the standard deviation of the signals,
+
+".axis" is an optional suffix to denote which of the 3-axial signals (X, Y, or Z directions) is measured.
+Each of these variables contains the mean value across all observations for a given Subject and Activity.
+
+4.	tBodyAcc.mean.X
+5.	tBodyAcc.mean.Y
+6.	tBodyAcc.mean.Z
+7.	tBodyAcc.std.X
+8.	tBodyAcc.std.Y
+9.	tBodyAcc.std.Z
+10.	tGravityAcc.mean.X
+11.	tGravityAcc.mean.Y
+12.	tGravityAcc.mean.Z
+13.	tGravityAcc.std.X
+14.	tGravityAcc.std.Y
+15.	tGravityAcc.std.Z
+16.	tBodyAccJerk.mean.X
+17.	tBodyAccJerk.mean.Y
+18.	tBodyAccJerk.mean.Z
+19.	tBodyAccJerk.std.X
+20.	tBodyAccJerk.std.Y
+21.	tBodyAccJerk.std.Z
+22.	tBodyGyro.mean.X
+23.	tBodyGyro.mean.Y
+24.	tBodyGyro.mean.Z
+25.	tBodyGyro.std.X
+26.	tBodyGyro.std.Y
+27.	tBodyGyro.std.Z
+28.	tBodyGyroJerk.mean.X
+29.	tBodyGyroJerk.mean.Y
+30.	tBodyGyroJerk.mean.Z
+31.	tBodyGyroJerk.std.X
+32.	tBodyGyroJerk.std.Y
+33.	tBodyGyroJerk.std.Z
+34.	tBodyAccMag.mean
+35.	tBodyAccMag.std
+36.	tGravityAccMag.mean
+37.	tGravityAccMag.std
+38.	tBodyAccJerkMag.mean
+39.	tBodyAccJerkMag.std
+40.	tBodyGyroMag.mean
+41.	tBodyGyroMag.std
+42.	tBodyGyroJerkMag.mean
+43.	tBodyGyroJerkMag.std
+44.	fBodyAcc.mean.X
+45.	fBodyAcc.mean.Y
+46.	fBodyAcc.mean.Z
+47.	fBodyAcc.std.X
+48.	fBodyAcc.std.Y
+49.	fBodyAcc.std.Z
+50.	fBodyAccJerk.mean.X
+51.	fBodyAccJerk.mean.Y
+52.	fBodyAccJerk.mean.Z
+53.	fBodyAccJerk.std.X
+54.	fBodyAccJerk.std.Y
+55.	fBodyAccJerk.std.Z
+56.	fBodyGyro.mean.X
+57.	fBodyGyro.mean.Y
+58.	fBodyGyro.mean.Z
+59.	fBodyGyro.std.X
+60.	fBodyGyro.std.Y
+61.	fBodyGyro.std.Z
+62.	fBodyAccMag.mean
+63.	fBodyAccMag.std
+64.	fBodyBodyAccJerkMag.mean
+65.	fBodyBodyAccJerkMag.std
+66.	fBodyBodyGyroMag.mean
+67.	fBodyBodyGyroMag.std
+68.	fBodyBodyGyroJerkMag.mean
+69.	fBodyBodyGyroJerkMag.std
